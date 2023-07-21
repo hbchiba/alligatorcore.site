@@ -1,0 +1,2483 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Alligator Core</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="Alligator Core : Stake and earn with bulletproof security."
+    />
+    <meta
+      property="og:title"
+      content="Alligator Core : Stake and earn with bulletproof security."
+    />
+    <meta
+      property="og:description"
+      content="Alligator Core : Stake and earn with bulletproof security."
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <link rel="shortcut icon" type="image/png" href="./images/logo.png" />
+
+    <link href="./css/tiny-slider.css" rel="stylesheet" />
+    <!-- Main Css -->
+    <link href="./css/line.css" type="text/css" rel="stylesheet" />
+    <link
+      href="./css/materialdesignicons.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="./css/tailwind.css" />
+
+    <style>
+      *,
+      ::after,
+      ::before {
+        box-sizing: border-box;
+        border-width: 0;
+        border-style: solid;
+        border-color: #e5e7eb;
+      }
+      ::after,
+      ::before {
+        --tw-content: '';
+      }
+      html {
+        line-height: 1.5;
+        -webkit-text-size-adjust: 100%;
+        -moz-tab-size: 4;
+        tab-size: 4;
+        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+          'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
+          'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+          'Noto Color Emoji';
+        font-feature-settings: normal;
+        font-variation-settings: normal;
+      }
+      body {
+        margin: 0;
+        line-height: inherit;
+      }
+      hr {
+        height: 0;
+        color: inherit;
+        border-top-width: 1px;
+      }
+      abbr:where([title]) {
+        -webkit-text-decoration: underline dotted;
+        text-decoration: underline dotted;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-size: inherit;
+        font-weight: inherit;
+      }
+      a {
+        color: inherit;
+        text-decoration: inherit;
+      }
+      b,
+      strong {
+        font-weight: bolder;
+      }
+      code,
+      kbd,
+      pre,
+      samp {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+          'Liberation Mono', 'Courier New', monospace;
+        font-size: 1em;
+      }
+      small {
+        font-size: 80%;
+      }
+      sub,
+      sup {
+        font-size: 75%;
+        line-height: 0;
+        position: relative;
+        vertical-align: baseline;
+      }
+      sub {
+        bottom: -0.25em;
+      }
+      sup {
+        top: -0.5em;
+      }
+      table {
+        text-indent: 0;
+        border-color: inherit;
+        border-collapse: collapse;
+      }
+      button,
+      input,
+      optgroup,
+      select,
+      textarea {
+        font-family: inherit;
+        font-size: 100%;
+        font-weight: inherit;
+        line-height: inherit;
+        color: inherit;
+        margin: 0;
+        padding: 0;
+      }
+      button,
+      select {
+        text-transform: none;
+      }
+      [type='button'],
+      [type='reset'],
+      [type='submit'],
+      button {
+        background-color: transparent;
+        background-image: none;
+      }
+      :-moz-focusring {
+        outline: auto;
+      }
+      :-moz-ui-invalid {
+        box-shadow: none;
+      }
+      progress {
+        vertical-align: baseline;
+      }
+      ::-webkit-inner-spin-button,
+      ::-webkit-outer-spin-button {
+        height: auto;
+      }
+      [type='search'] {
+        outline-offset: -2px;
+      }
+      ::-webkit-search-decoration {
+        -webkit-appearance: none;
+      }
+      ::-webkit-file-upload-button {
+        -webkit-appearance: button;
+        font: inherit;
+      }
+      summary {
+        display: list-item;
+      }
+      blockquote,
+      dd,
+      dl,
+      figure,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      hr,
+      p,
+      pre {
+        margin: 0;
+      }
+      fieldset {
+        margin: 0;
+        padding: 0;
+      }
+      legend {
+        padding: 0;
+      }
+      menu,
+      ol,
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      textarea {
+        resize: vertical;
+      }
+      input::placeholder,
+      textarea::placeholder {
+        opacity: 1;
+        color: #9ca3af;
+      }
+      [role='button'],
+      button {
+        cursor: pointer;
+      }
+      :disabled {
+        cursor: default;
+      }
+      audio,
+      canvas,
+      embed,
+      iframe,
+      img,
+      object,
+      svg,
+      video {
+        display: block;
+      }
+      img,
+      video {
+        max-width: 100%;
+        height: auto;
+      }
+      [hidden] {
+        display: none;
+      }
+      *,
+      ::before,
+      ::after {
+        --tw-border-spacing-x: 0;
+        --tw-border-spacing-y: 0;
+        --tw-translate-x: 0;
+        --tw-translate-y: 0;
+        --tw-rotate: 0;
+        --tw-skew-x: 0;
+        --tw-skew-y: 0;
+        --tw-scale-x: 1;
+        --tw-scale-y: 1;
+        --tw-pan-x: ;
+        --tw-pan-y: ;
+        --tw-pinch-zoom: ;
+        --tw-scroll-snap-strictness: proximity;
+        --tw-gradient-from-position: ;
+        --tw-gradient-via-position: ;
+        --tw-gradient-to-position: ;
+        --tw-ordinal: ;
+        --tw-slashed-zero: ;
+        --tw-numeric-figure: ;
+        --tw-numeric-spacing: ;
+        --tw-numeric-fraction: ;
+        --tw-ring-inset: ;
+        --tw-ring-offset-width: 0px;
+        --tw-ring-offset-color: #fff;
+        --tw-ring-color: rgb(59 130 246 / 0.5);
+        --tw-ring-offset-shadow: 0 0 #0000;
+        --tw-ring-shadow: 0 0 #0000;
+        --tw-shadow: 0 0 #0000;
+        --tw-shadow-colored: 0 0 #0000;
+        --tw-blur: ;
+        --tw-brightness: ;
+        --tw-contrast: ;
+        --tw-grayscale: ;
+        --tw-hue-rotate: ;
+        --tw-invert: ;
+        --tw-saturate: ;
+        --tw-sepia: ;
+        --tw-drop-shadow: ;
+        --tw-backdrop-blur: ;
+        --tw-backdrop-brightness: ;
+        --tw-backdrop-contrast: ;
+        --tw-backdrop-grayscale: ;
+        --tw-backdrop-hue-rotate: ;
+        --tw-backdrop-invert: ;
+        --tw-backdrop-opacity: ;
+        --tw-backdrop-saturate: ;
+        --tw-backdrop-sepia: ;
+      }
+      ::backdrop {
+        --tw-border-spacing-x: 0;
+        --tw-border-spacing-y: 0;
+        --tw-translate-x: 0;
+        --tw-translate-y: 0;
+        --tw-rotate: 0;
+        --tw-skew-x: 0;
+        --tw-skew-y: 0;
+        --tw-scale-x: 1;
+        --tw-scale-y: 1;
+        --tw-pan-x: ;
+        --tw-pan-y: ;
+        --tw-pinch-zoom: ;
+        --tw-scroll-snap-strictness: proximity;
+        --tw-gradient-from-position: ;
+        --tw-gradient-via-position: ;
+        --tw-gradient-to-position: ;
+        --tw-ordinal: ;
+        --tw-slashed-zero: ;
+        --tw-numeric-figure: ;
+        --tw-numeric-spacing: ;
+        --tw-numeric-fraction: ;
+        --tw-ring-inset: ;
+        --tw-ring-offset-width: 0px;
+        --tw-ring-offset-color: #fff;
+        --tw-ring-color: rgb(59 130 246 / 0.5);
+        --tw-ring-offset-shadow: 0 0 #0000;
+        --tw-ring-shadow: 0 0 #0000;
+        --tw-shadow: 0 0 #0000;
+        --tw-shadow-colored: 0 0 #0000;
+        --tw-blur: ;
+        --tw-brightness: ;
+        --tw-contrast: ;
+        --tw-grayscale: ;
+        --tw-hue-rotate: ;
+        --tw-invert: ;
+        --tw-saturate: ;
+        --tw-sepia: ;
+        --tw-drop-shadow: ;
+        --tw-backdrop-blur: ;
+        --tw-backdrop-brightness: ;
+        --tw-backdrop-contrast: ;
+        --tw-backdrop-grayscale: ;
+        --tw-backdrop-hue-rotate: ;
+        --tw-backdrop-invert: ;
+        --tw-backdrop-opacity: ;
+        --tw-backdrop-saturate: ;
+        --tw-backdrop-sepia: ;
+      }
+      .container {
+        width: 100%;
+      }
+      @media (min-width: 640px) {
+        .container {
+          max-width: 640px;
+        }
+      }
+      @media (min-width: 768px) {
+        .container {
+          max-width: 768px;
+        }
+      }
+      @media (min-width: 1024px) {
+        .container {
+          max-width: 1024px;
+        }
+      }
+      @media (min-width: 1280px) {
+        .container {
+          max-width: 1280px;
+        }
+      }
+      @media (min-width: 1536px) {
+        .container {
+          max-width: 1536px;
+        }
+      }
+      .fixed {
+        position: fixed;
+      }
+      .absolute {
+        position: absolute;
+      }
+      .relative {
+        position: relative;
+      }
+      .-bottom-\[2px\] {
+        bottom: -2px;
+      }
+      .end-0 {
+        inset-inline-end: 0px;
+      }
+      .start-0 {
+        inset-inline-start: 0px;
+      }
+      .top-2\/4 {
+        top: 50%;
+      }
+      .bottom-5 {
+        bottom: 1.25rem;
+      }
+      .end-5 {
+        inset-inline-end: 1.25rem;
+      }
+      .z-10 {
+        z-index: 10;
+      }
+      .order-1 {
+        order: 1;
+      }
+      .order-2 {
+        order: 2;
+      }
+      .col-span-12 {
+        grid-column: span 12 / span 12;
+      }
+      .-m-3 {
+        margin: -0.75rem;
+      }
+      .mx-2 {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+      }
+      .mx-4 {
+        margin-left: 1rem;
+        margin-right: 1rem;
+      }
+      .mx-auto {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .mb-0 {
+        margin-bottom: 0px;
+      }
+      .mb-1 {
+        margin-bottom: 0.25rem;
+      }
+      .mb-3 {
+        margin-bottom: 0.75rem;
+      }
+      .mb-4 {
+        margin-bottom: 1rem;
+      }
+      .mb-5 {
+        margin-bottom: 1.25rem;
+      }
+      .mb-6 {
+        margin-bottom: 1.5rem;
+      }
+      .me-2 {
+        margin-inline-end: 0.5rem;
+      }
+      .me-6 {
+        margin-inline-end: 1.5rem;
+      }
+      .mt-10 {
+        margin-top: 2.5rem;
+      }
+      .mt-16 {
+        margin-top: 4rem;
+      }
+      .mt-2 {
+        margin-top: 0.5rem;
+      }
+      .mt-24 {
+        margin-top: 6rem;
+      }
+      .mt-3 {
+        margin-top: 0.75rem;
+      }
+      .mt-4 {
+        margin-top: 1rem;
+      }
+      .mt-6 {
+        margin-top: 1.5rem;
+      }
+      .mt-8 {
+        margin-top: 2rem;
+      }
+      .mt-\[10px\] {
+        margin-top: 10px;
+      }
+      .block {
+        display: block;
+      }
+      .inline {
+        display: inline;
+      }
+      .flex {
+        display: flex;
+      }
+      .table {
+        display: table;
+      }
+      .grid {
+        display: grid;
+      }
+      .hidden {
+        display: none;
+      }
+      .h-16 {
+        height: 4rem;
+      }
+      .h-24 {
+        height: 6rem;
+      }
+      .h-4 {
+        height: 1rem;
+      }
+      .h-7 {
+        height: 1.75rem;
+      }
+      .h-auto {
+        height: auto;
+      }
+      .h-9 {
+        height: 2.25rem;
+      }
+      .w-16 {
+        width: 4rem;
+      }
+      .w-24 {
+        width: 6rem;
+      }
+      .w-4 {
+        width: 1rem;
+      }
+      .w-7 {
+        width: 1.75rem;
+      }
+      .w-full {
+        width: 100%;
+      }
+      .w-9 {
+        width: 2.25rem;
+      }
+      .max-w-xl {
+        max-width: 36rem;
+      }
+      .shrink-0 {
+        flex-shrink: 0;
+      }
+      .-translate-y-2\/4 {
+        --tw-translate-y: -50%;
+        transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+          rotate(var(--tw-rotate)) skewX(var(--tw-skew-x))
+          skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
+          scaleY(var(--tw-scale-y));
+      }
+      .rotate-180 {
+        --tw-rotate: 180deg;
+        transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+          rotate(var(--tw-rotate)) skewX(var(--tw-skew-x))
+          skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
+          scaleY(var(--tw-scale-y));
+      }
+      .list-decimal {
+        list-style-type: decimal;
+      }
+      .list-none {
+        list-style-type: none;
+      }
+      .grid-cols-1 {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+      }
+      .grid-cols-12 {
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+      }
+      .grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .items-center {
+        align-items: center;
+      }
+      .justify-center {
+        justify-content: center;
+      }
+      .justify-between {
+        justify-content: space-between;
+      }
+      .gap-\[30px\] {
+        gap: 30px;
+      }
+      .overflow-hidden {
+        overflow: hidden;
+      }
+      .scroll-smooth {
+        scroll-behavior: smooth;
+      }
+      .rounded-full {
+        border-radius: 9999px;
+      }
+      .rounded-lg {
+        border-radius: 0.5rem;
+      }
+      .rounded-md {
+        border-radius: 0.375rem;
+      }
+      .rounded-xl {
+        border-radius: 0.75rem;
+      }
+      .border {
+        border-width: 1px;
+      }
+      .border-b {
+        border-bottom-width: 1px;
+      }
+      .border-t {
+        border-top-width: 1px;
+      }
+      .border-gray-100 {
+        --tw-border-opacity: 1;
+        border-color: rgb(243 244 246 / var(--tw-border-opacity));
+      }
+      .border-gray-800 {
+        --tw-border-opacity: 1;
+        border-color: rgb(31 41 55 / var(--tw-border-opacity));
+      }
+      .border-indigo-600 {
+        --tw-border-opacity: 1;
+        border-color: rgb(79 70 229 / var(--tw-border-opacity));
+      }
+      .border-slate-800 {
+        --tw-border-opacity: 1;
+        border-color: rgb(30 41 59 / var(--tw-border-opacity));
+      }
+      .bg-gray-50 {
+        --tw-bg-opacity: 1;
+        background-color: rgb(249 250 251 / var(--tw-bg-opacity));
+      }
+      .bg-orange-200 {
+        --tw-bg-opacity: 1;
+        background-color: rgb(254 215 170 / var(--tw-bg-opacity));
+      }
+      .bg-orange-200\/5 {
+        background-color: rgb(254 215 170 / 0.05);
+      }
+      .bg-white {
+        --tw-bg-opacity: 1;
+        background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+      }
+      .bg-orange-600 {
+        --tw-bg-opacity: 1;
+        background-color: rgb(234 88 12 / var(--tw-bg-opacity));
+      }
+      .fill-orange-200\/5 {
+        fill: rgb(254 215 170 / 0.05);
+      }
+      .stroke-1 {
+        stroke-width: 1;
+      }
+      .p-5 {
+        padding: 1.25rem;
+      }
+      .p-6 {
+        padding: 1.5rem;
+      }
+      .px-0 {
+        padding-left: 0px;
+        padding-right: 0px;
+      }
+      .px-4 {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+      .py-16 {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+      }
+      .py-2 {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+      }
+      .py-36 {
+        padding-top: 9rem;
+        padding-bottom: 9rem;
+      }
+      .py-4 {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+      }
+      .py-6 {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+      }
+      .py-\[30px\] {
+        padding-top: 30px;
+        padding-bottom: 30px;
+      }
+      .py-\[60px\] {
+        padding-top: 60px;
+        padding-bottom: 60px;
+      }
+      .pb-8 {
+        padding-bottom: 2rem;
+      }
+      .ps-1 {
+        padding-inline-start: 0.25rem;
+      }
+      .text-center {
+        text-align: center;
+      }
+      .text-start {
+        text-align: start;
+      }
+      .align-middle {
+        vertical-align: middle;
+      }
+      .text-base {
+        font-size: 1rem;
+        line-height: 1.5rem;
+      }
+      .text-2xl {
+        font-size: 1.5rem;
+        line-height: 2rem;
+      }
+      .text-3xl {
+        font-size: 1.875rem;
+        line-height: 2.25rem;
+      }
+      .text-4xl {
+        font-size: 2.25rem;
+        line-height: 2.5rem;
+      }
+      .text-\[22px\] {
+        font-size: 22px;
+      }
+      .text-lg {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+      }
+      .text-xl {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+      }
+      .font-medium {
+        font-weight: 500;
+      }
+      .font-semibold {
+        font-weight: 600;
+      }
+      .leading-normal {
+        line-height: 1.5;
+      }
+      .leading-9 {
+        line-height: 2.25rem;
+      }
+      .tracking-\[1px\] {
+        letter-spacing: 1px;
+      }
+      .text-black {
+        --tw-text-opacity: 1;
+        color: rgb(0 0 0 / var(--tw-text-opacity));
+      }
+      .text-gray-100 {
+        --tw-text-opacity: 1;
+        color: rgb(243 244 246 / var(--tw-text-opacity));
+      }
+      .text-gray-200 {
+        --tw-text-opacity: 1;
+        color: rgb(229 231 235 / var(--tw-text-opacity));
+      }
+      .text-gray-300 {
+        --tw-text-opacity: 1;
+        color: rgb(209 213 219 / var(--tw-text-opacity));
+      }
+      .text-gray-50 {
+        --tw-text-opacity: 1;
+        color: rgb(249 250 251 / var(--tw-text-opacity));
+      }
+      .text-green-900 {
+        --tw-text-opacity: 1;
+        color: rgb(20 83 45 / var(--tw-text-opacity));
+      }
+      .text-orange-200 {
+        --tw-text-opacity: 1;
+        color: rgb(254 215 170 / var(--tw-text-opacity));
+      }
+      .text-slate-400 {
+        --tw-text-opacity: 1;
+        color: rgb(148 163 184 / var(--tw-text-opacity));
+      }
+      .text-transparent {
+        color: transparent;
+      }
+      .text-white {
+        --tw-text-opacity: 1;
+        color: rgb(255 255 255 / var(--tw-text-opacity));
+      }
+      .text-indigo-600 {
+        --tw-text-opacity: 1;
+        color: rgb(79 70 229 / var(--tw-text-opacity));
+      }
+      .shadow {
+        --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1),
+          0 1px 2px -1px rgb(0 0 0 / 0.1);
+        --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color),
+          0 1px 2px -1px var(--tw-shadow-color);
+        box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+          var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+      }
+      .shadow-sm {
+        --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+        --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+        box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+          var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+      }
+      .transition-all {
+        transition-property: all;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 150ms;
+      }
+      .duration-500 {
+        transition-duration: 500ms;
+      }
+      .ease-in-out {
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .after\:bg-orange-200::after {
+        content: var(--tw-content);
+        --tw-bg-opacity: 1;
+        background-color: rgb(254 215 170 / var(--tw-bg-opacity));
+      }
+      .hover\:border-indigo-600:hover {
+        --tw-border-opacity: 1;
+        border-color: rgb(79 70 229 / var(--tw-border-opacity));
+      }
+      .hover\:border-indigo-700:hover {
+        --tw-border-opacity: 1;
+        border-color: rgb(67 56 202 / var(--tw-border-opacity));
+      }
+      .hover\:bg-indigo-600:hover {
+        --tw-bg-opacity: 1;
+        background-color: rgb(79 70 229 / var(--tw-bg-opacity));
+      }
+      .hover\:bg-orange-200:hover {
+        --tw-bg-opacity: 1;
+        background-color: rgb(254 215 170 / var(--tw-bg-opacity));
+      }
+      .hover\:bg-orange-300:hover {
+        --tw-bg-opacity: 1;
+        background-color: rgb(253 186 116 / var(--tw-bg-opacity));
+      }
+      .hover\:text-gray-400:hover {
+        --tw-text-opacity: 1;
+        color: rgb(156 163 175 / var(--tw-text-opacity));
+      }
+      .hover\:text-orange-200:hover {
+        --tw-text-opacity: 1;
+        color: rgb(254 215 170 / var(--tw-text-opacity));
+      }
+      .hover\:text-white:hover {
+        --tw-text-opacity: 1;
+        color: rgb(255 255 255 / var(--tw-text-opacity));
+      }
+      .hover\:shadow-md:hover {
+        --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1),
+          0 2px 4px -2px rgb(0 0 0 / 0.1);
+        --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color),
+          0 2px 4px -2px var(--tw-shadow-color);
+        box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+          var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+      }
+      .focus\:outline-none:focus {
+        outline: 2px solid transparent;
+        outline-offset: 2px;
+      }
+      .group:hover .group-hover\:fill-white\/10 {
+        fill: rgb(255 255 255 / 0.1);
+      }
+      .group:hover .group-hover\:text-white {
+        --tw-text-opacity: 1;
+        color: rgb(255 255 255 / var(--tw-text-opacity));
+      }
+      .group:hover .group-hover\:text-white\/50 {
+        color: rgb(255 255 255 / 0.5);
+      }
+      :is([dir='ltr'] .ltr\:-rotate-\[15deg\]) {
+        --tw-rotate: -15deg;
+        transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+          rotate(var(--tw-rotate)) skewX(var(--tw-skew-x))
+          skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
+          scaleY(var(--tw-scale-y));
+      }
+      :is([dir='rtl'] .rtl\:rotate-\[15deg\]) {
+        --tw-rotate: 15deg;
+        transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+          rotate(var(--tw-rotate)) skewX(var(--tw-skew-x))
+          skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
+          scaleY(var(--tw-scale-y));
+      }
+      @media (prefers-color-scheme: dark) {
+        .dark\:inline-block {
+          display: inline-block;
+        }
+        .dark\:border-gray-100 {
+          --tw-border-opacity: 1;
+          border-color: rgb(243 244 246 / var(--tw-border-opacity));
+        }
+        .dark\:border-gray-700 {
+          --tw-border-opacity: 1;
+          border-color: rgb(55 65 81 / var(--tw-border-opacity));
+        }
+        .dark\:bg-slate-900 {
+          --tw-bg-opacity: 1;
+          background-color: rgb(15 23 42 / var(--tw-bg-opacity));
+        }
+        .dark\:bg-slate-800 {
+          --tw-bg-opacity: 1;
+          background-color: rgb(30 41 59 / var(--tw-bg-opacity));
+        }
+        .dark\:bg-white {
+          --tw-bg-opacity: 1;
+          background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+        }
+        .dark\:text-white {
+          --tw-text-opacity: 1;
+          color: rgb(255 255 255 / var(--tw-text-opacity));
+        }
+        .dark\:text-gray-200 {
+          --tw-text-opacity: 1;
+          color: rgb(229 231 235 / var(--tw-text-opacity));
+        }
+        .dark\:text-gray-400 {
+          --tw-text-opacity: 1;
+          color: rgb(156 163 175 / var(--tw-text-opacity));
+        }
+        .dark\:text-slate-800 {
+          --tw-text-opacity: 1;
+          color: rgb(30 41 59 / var(--tw-text-opacity));
+        }
+        .dark\:shadow-gray-800 {
+          --tw-shadow-color: #1f2937;
+          --tw-shadow: var(--tw-shadow-colored);
+        }
+        .dark\:hover\:border-indigo-600:hover {
+          --tw-border-opacity: 1;
+          border-color: rgb(79 70 229 / var(--tw-border-opacity));
+        }
+        .dark\:hover\:bg-indigo-600:hover {
+          --tw-bg-opacity: 1;
+          background-color: rgb(79 70 229 / var(--tw-bg-opacity));
+        }
+        .dark\:hover\:bg-orange-200:hover {
+          --tw-bg-opacity: 1;
+          background-color: rgb(254 215 170 / var(--tw-bg-opacity));
+        }
+        .dark\:hover\:shadow-gray-700:hover {
+          --tw-shadow-color: #374151;
+          --tw-shadow: var(--tw-shadow-colored);
+        }
+      }
+      @media (min-width: 640px) {
+        .sm\:-bottom-px {
+          bottom: -1px;
+        }
+      }
+      @media (min-width: 768px) {
+        .md\:order-1 {
+          order: 1;
+        }
+        .md\:order-2 {
+          order: 2;
+        }
+        .md\:col-span-12 {
+          grid-column: span 12 / span 12;
+        }
+        .md\:col-span-3 {
+          grid-column: span 3 / span 3;
+        }
+        .md\:col-span-5 {
+          grid-column: span 5 / span 5;
+        }
+        .md\:col-span-7 {
+          grid-column: span 7 / span 7;
+        }
+        .md\:mt-24 {
+          margin-top: 6rem;
+        }
+        .md\:grid-cols-12 {
+          grid-template-columns: repeat(12, minmax(0, 1fr));
+        }
+        .md\:grid-cols-2 {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        .md\:grid-cols-3 {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+        .md\:py-24 {
+          padding-top: 6rem;
+          padding-bottom: 6rem;
+        }
+        .md\:text-start {
+          text-align: start;
+        }
+        .md\:text-3xl {
+          font-size: 1.875rem;
+          line-height: 2.25rem;
+        }
+        .md\:leading-normal {
+          line-height: 1.5;
+        }
+      }
+      @media (min-width: 1024px) {
+        .lg\:col-span-3 {
+          grid-column: span 3 / span 3;
+        }
+        .lg\:col-span-5 {
+          grid-column: span 5 / span 5;
+        }
+        .lg\:col-span-7 {
+          grid-column: span 7 / span 7;
+        }
+        .lg\:col-span-8 {
+          grid-column: span 8 / span 8;
+        }
+        .lg\:ms-10 {
+          margin-inline-start: 2.5rem;
+        }
+        .lg\:grid-cols-12 {
+          grid-template-columns: repeat(12, minmax(0, 1fr));
+        }
+        .lg\:grid-cols-3 {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+        .lg\:py-44 {
+          padding-top: 11rem;
+          padding-bottom: 11rem;
+        }
+        .lg\:text-5xl {
+          font-size: 3rem;
+          line-height: 1;
+        }
+        .lg\:leading-normal {
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+
+  <body
+    class="font-nunito text-base text-black dark:text-white dark:bg-slate-900"
+  >
+    <nav id="topnav" class="defaultscroll is-sticky">
+      <div class="container relative">
+        <a class="logo" href="/">
+          <img
+            src="./images/Gator-v4.png"
+            class="hidden dark:inline-block"
+            alt=""
+            style="height: 50px"
+          />
+        </a>
+        <ul class="buy-button list-none mb-0">
+          <li class="inline mb-0">
+            <a href="/login" class="text-orange-200 hover:text-white">Login</a>
+          </li>
+
+          <li class="inline ps-1 mb-0">
+            <a
+              href="https://alligatorcore.ai/register/135OIs0RktQM26"
+              target="_blank"
+              class="py-2 px-4 mx-2 rounded-full bg-orange-200 hover:bg-inido-700 border-indigo-600 hover:border-indigo-700 text-black"
+              >Register</a
+            >
+          </li>
+        </ul>
+
+        <div id="navigation" style="display: none"></div>
+      </div>
+    </nav>
+
+    <section class="relative table w-full py-36 lg:py-44">
+      <div class="container relative">
+        <div
+          class="grid md:grid-cols-12 grid-cols-1 items-center mt-10 gap-[30px]"
+        >
+          <div class="md:col-span-7">
+            <div class="me-6">
+              <h4
+                class="font-semibold lg:leading-normal leading-normal text-4xl lg:text-5xl mb-5 text-black dark:text-white"
+              >
+                Stake and earn with bulletproof
+                <span class="text-orange-200">security.</span>
+              </h4>
+              <p class="text-slate-400 text-lg max-w-xl">
+                Alligator Core provides you with a way to generate interest on
+                your assets through multiple investment choices.
+              </p>
+
+              <div class="mt-6">
+                <a
+                  href="https://alligatorcore.ai/register/135OIs0RktQM26"
+                  class="btn bg-orange-200 hover:bg-orange-300 text-green-900 rounded-md me-2 mt-2"
+                  ><i class="uil uil-user"></i> Get involved</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="md:col-span-5">
+            <img src="./images/123.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="py-6 border-t border-b border-gray-100 dark:border-gray-700"
+    >
+      <div class="container relative">
+        <div class="grid md:grid-cols-3 grid-cols-2 justify-center gap-[30px]">
+          <div class="mx-auto py-4 flex items-center">
+            <span class="mx-4"> </span>
+            <div
+              class="w-16 h-16 bg-orange-200/5 text-orange-200 rounded-lg text-2xl flex align-middle justify-center items-center shadow-sm dark:shadow-gray-800 mx-4"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-pie-chart w-7 h-7 ltr:-rotate-[15deg] rtl:rotate-[15deg]"
+              >
+                <path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path>
+                <path d="M22 12A10 10 0 0 0 12 2v10z"></path>
+              </svg>
+            </div>
+            <span class="">Earn daily in a trusted space</span>
+          </div>
+
+          <div class="mx-auto py-4 flex items-center">
+            <div
+              class="w-16 h-16 bg-orange-200/5 text-orange-200 rounded-lg text-2xl flex align-middle justify-center items-center shadow-sm dark:shadow-gray-800 mx-4"
+            >
+              <i class="uil uil-presentation-line"></i>
+            </div>
+            Maximize your gains today.
+          </div>
+
+          <div class="mx-auto py-4 flex items-center">
+            <div
+              class="w-16 h-16 bg-orange-200/5 text-orange-200 rounded-lg text-2xl flex align-middle justify-center items-center shadow-sm dark:shadow-gray-800 mx-4"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-codesandbox h-7 w-7 stroke-1 text-orange-200"
+              >
+                <path
+                  d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
+                ></path>
+                <polyline points="7.5 4.21 12 6.81 16.5 4.21"></polyline>
+                <polyline points="7.5 19.79 7.5 14.6 3 12"></polyline>
+                <polyline points="21 12 16.5 14.6 16.5 19.79"></polyline>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+              </svg>
+            </div>
+            No Limits. No fees. Global Access.
+          </div>
+        </div>
+        <!--end grid-->
+      </div>
+      <!--end container-->
+    </section>
+
+    <section class="relative md:py-24 py-16 bg-gray-50 dark:bg-slate-800">
+      <div class="container relative md:mt-24 mt-16">
+        <div
+          class="grid lg:grid-cols-12 md:grid-cols-2 grid-cols-1 items-center mt-10 gap-[30px]"
+        >
+          <div class="lg:col-span-5 md:order-2 order-1">
+            <div class="lg:ms-10">
+              <div
+                class="bg-white dark:bg-gator-900 p-6 rounded-md shadow dark:shadow-gray-800"
+              >
+                <img src="./images/Gator-v4.png" alt="" />
+                <div class="mt-8"></div>
+              </div>
+            </div>
+          </div>
+          <div class="lg:col-span-7 md:order-1 order-2">
+            <h3
+              class="mb-6 md:text-3xl text-2xl md:leading-normal leading-normal font-semibold"
+            >
+              Alligator <span class="text-orange-200">Core</span>
+            </h3>
+            <p class="text-slate-400 max-w-xl">
+              The majority of digital assets sit idle on exchanges and in
+              wallets, without yielding interest. We're on a mission to change
+              that.
+            </p>
+
+            <p class="text-slate-400 max-w-xl">
+              The Alligator Core Protocol, allows users to generate earnings by
+              leveraging their digital assets.
+            </p>
+
+            <p class="text-slate-400 max-w-xl mt-2">
+              The revenue of Alligator Core’s Earn products is chosen by various
+              activities engaged in by our AI such as staking for rewards,
+              investing in the DeFi ecosystem, trading Binary Options, providing
+              market liquidity, yield farming, lending to leveraged trading
+              users in the lending market and trading digital assets in the DeFi
+              ecosystem. Those who stake their digital assets in the Alligator
+              Core wallet in return, receive daily settlement based on their
+              chosen Earn product for the duration allowed.
+            </p>
+
+            <p class="text-slate-400 max-w-xl">
+              Alligator Core’s earn structure is designed to ensure that users,
+              who stake their digital assets are always more profitable than
+              token (BTC &amp; ETH) holders. Token holders can now earn higher
+              returns progressively regardless of market conditions.
+            </p>
+
+            <p class="text-slate-400 max-w-xl">
+              If a user stakes their digital assets in the Alligator Core
+              wallet, the Alligator Core AI splits these funds into the various
+              activities, it has been taught to actively manage positions in.
+              This diversification serves as a risk management tool leading to a
+              delta-positive outcome of the traded market. Trading begins
+              immediately after digital assets are transferred to your Alligator
+              Core wallet, and all users are free to choose the market to trade
+              based on their Earn product.
+            </p>
+          </div>
+        </div>
+        <!--end grid-->
+        <div class="col-12">
+          <p class="text-slate-400 mt-4">
+            Alligator Core aims to generate and distribute investments and
+            trading earnings in a fully decentralized way. Decentralized,
+            trustless networks, such as Bitcoin and Ethereum, eliminate the risk
+            that self-interest will turn into corruption or theft. The role of
+            the Alligator Core developers is to publish private smart contracts
+            to various blockchain networks we incorporate into the Alligator
+            Core Hub, monitor the performance of our AI model, and generate
+            hypothesis to structure the decision process and narrow down the
+            options. To improve our AI model, it is fed more data as fresh data
+            is one of the most common and effective methods of improving the
+            accuracy of a machine-learning model. The existing data will be
+            improved by enriching the dataset to result in an improved AI model.
+            Sometimes, the algorithm that was initially created for the model
+            needs to be improved as well, this is done by improving the
+            architecture, taking advantage of modern hardware features, and
+            feature re-engineering the algorithm to make it more efficient and
+            effective by modifying the algorithm’s structure or by tweaking its
+            parameters.
+          </p>
+          <p class="text-slate-400">
+            The Alligator Core Hub contracts are totally automated: the
+            developers do not have the ability to spend funds that are held on
+            contract, do not control how markets resolve, do not approve or
+            reject trades or other transactions on the network, cannot undo
+            trades, cannot modify or cancel orders, etc. The Alligator Core
+            oracle allows information to be migrated from the real world to a
+            blockchain without relying on a trusted intermediary.
+          </p>
+          <p class="text-slate-400">
+            Alligator Core Hub contracts follow a four-stage progression:
+            creation, trading, reporting, and settlement. Anyone can create an
+            Alligator Core wallet and earn based on the Earn product they
+            choose. Trading begins immediately after the Earn product contract
+            activation, and the Alligator Core AI with the help of the data
+            supplied by the oracle determines the right market all users will
+            trade at any given time. After the specified duration on which the
+            user funds are strategically exposed to the various market
+            activities had occurred, the outcome of the trades and investments
+            in correspondence with the Earn product activated in the Alligator
+            Core wallet is determined. Once the outcome is determined, users can
+            receive their earnings, collect their payouts or activate new
+            contracts.
+          </p>
+          <div class="mt-4">
+            <a
+              href="https://alligatorcore.ai/files/Alligator-Core-Whitepaper.pdf"
+              class="btn btn-link text-orange-200 hover:text-orange-200 after:bg-orange-200 duration-500 ease-in-out"
+              >Find Out More <i class="uil uil-angle-right-b align-middle"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <!--end container-->
+    </section>
+
+    <section class="relative table w-full py-36 lg:py-44">
+      <div class="container relative dark:border-gray-100">
+        <div class="grid grid-cols-1 pb-8 text-center">
+          <h3
+            class="mb-6 md:text-3xl text-2xl md:leading-normal leading-normal font-semibold"
+          >
+            Unlock your earning potential with our Earn Products
+          </h3>
+        </div>
+        <!--end grid-->
+
+        <div
+          class="grid lg:grid-cols-12 md:grid-cols-2 grid-cols-1 items-center mt-10 gap-[30px]"
+        >
+          <div class="lg:col-span-5">
+            <img src="./images/img2.png" alt="" />
+          </div>
+          <div class="lg:col-span-7">
+            <div class="lg:ms-10">
+              <p class="text-slate-400 max-w-xl">
+                Alligator Core provides you with a way to generate interest on
+                your assets through multiple investment choices. Our Earn
+                Products include Basic Earn and Max Earn.
+              </p>
+
+              <p class="text-slate-400 max-w-xl mt-2">
+                Basic Earn is a product created by Alligator Core to help users
+                with idle digital assets to consistently earn. Basic Earn has
+                different sources of yield from the Max Earn product.
+              </p>
+              <p class="text-slate-400 max-w-xl">
+                Basic Earn revenue is earned by lending to leveraged trading
+                users in the lending market and trading digital assets in the
+                DeFi ecosystem.
+              </p>
+              <p class="text-slate-400 max-w-xl mt-2">
+                Max Earn, a product created by Alligator Core that has multiple
+                sources of yield such as DeFi staking rewards, AI binary options
+                trading, market liquidity supply to DeFi protocols, yield
+                farming, and investments in emerging DeFi protocols also helps
+                users with idle digital assets to earn securely.
+              </p>
+
+              <ul class="list-none text-slate-400 mt-4">
+                <p class="mb-3 text-white text-lg">What are the benefits?</p>
+                <li class="mb-1 flex">
+                  <i
+                    class="uil uil-check-circle text-orange-200 text-xl me-2"
+                  ></i>
+                  <div>
+                    <strong>Low risks: </strong>
+                    We protect your digital assets in our Earn Products with
+                    strict risk control, industry-leading security measures, and
+                    advanced infrastructure.
+                  </div>
+                </li>
+                <li class="mb-1 flex">
+                  <i
+                    class="uil uil-check-circle text-orange-200 text-xl me-2"
+                  ></i>
+                  <div>
+                    <strong>Sustainable Earnings: </strong>
+                    Gain USDT in any market condition with principal protection.
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="relative md:py-24 py-16 bg-gray-50 dark:bg-slate-800">
+      <div class="container relative">
+        <div class="grid grid-cols-1 pb-8 text-center mt-24">
+          <h3
+            class="mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-semibold"
+          >
+            WHY STAKE WITH ALLIGATOR CORE?
+          </h3>
+        </div>
+
+        <div
+          class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 mt-8 gap-[30px]"
+        >
+          <div
+            class="group relative p-6 shadow dark:shadow-gray-800 hover:shadow-md dark:hover:shadow-gray-700 hover:bg-orange-200 dark:hover:bg-orange-200 transition-all duration-500 ease-in-out rounded-xl bg-white dark:bg-gator-900 overflow-hidden text-center"
+          >
+            <div class="relative overflow-hidden text-transparent -m-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-hexagon h-24 w-24 fill-orange-200/5 group-hover:fill-white/10 mx-auto"
+              >
+                <path
+                  d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
+                ></path>
+              </svg>
+              <div
+                class="absolute top-2/4 -translate-y-2/4 start-0 end-0 mx-auto text-orange-200 rounded-xl group-hover:text-white transition-all duration-500 ease-in-out text-3xl flex align-middle justify-center items-center"
+              >
+                <i class="uil uil-chart-line"></i>
+              </div>
+            </div>
+
+            <div class="mt-6">
+              <a
+                href="#"
+                class="text-lg font-medium group-hover:text-white transition-all duration-500 ease-in-out"
+                >Financial Freedom With No Volatility</a
+              >
+              <p
+                class="text-slate-400 group-hover:text-white/50 transition-all duration-500 ease-in-out mt-3"
+              >
+                Earn in a price-stable currency. Generate USDT on your terms,
+                instantly.
+              </p>
+            </div>
+          </div>
+          <div
+            class="group relative p-6 shadow dark:shadow-gray-800 hover:shadow-md dark:hover:shadow-gray-700 hover:bg-orange-200 dark:hover:bg-orange-200 transition-all duration-500 ease-in-out rounded-xl bg-white dark:bg-gator-900 overflow-hidden text-center"
+          >
+            <div class="relative overflow-hidden text-transparent -m-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-hexagon h-24 w-24 fill-orange-200/5 group-hover:fill-white/10 mx-auto"
+              >
+                <path
+                  d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
+                ></path>
+              </svg>
+              <div
+                class="absolute top-2/4 -translate-y-2/4 start-0 end-0 mx-auto text-orange-200 rounded-xl group-hover:text-white transition-all duration-500 ease-in-out text-3xl flex align-middle justify-center items-center"
+              >
+                <i class="uil uil-crosshairs"></i>
+              </div>
+            </div>
+
+            <div class="mt-6">
+              <a
+                href="#"
+                class="text-lg font-medium group-hover:text-white transition-all duration-500 ease-in-out"
+                >No Fees</a
+              >
+              <p
+                class="text-slate-400 group-hover:text-white/50 transition-all duration-500 ease-in-out mt-3"
+              >
+                Alligator Core is one of the few protocols offering digital
+                asset staking free of charge while you reap all the rewards.
+              </p>
+            </div>
+          </div>
+          <div
+            class="group relative p-6 shadow dark:shadow-gray-800 hover:shadow-md dark:hover:shadow-gray-700 hover:bg-orange-200 dark:hover:bg-orange-200 transition-all duration-500 ease-in-out rounded-xl bg-white dark:bg-gator-900 overflow-hidden text-center"
+          >
+            <div class="relative overflow-hidden text-transparent -m-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-hexagon h-24 w-24 fill-orange-200/5 group-hover:fill-white/10 mx-auto"
+              >
+                <path
+                  d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
+                ></path>
+              </svg>
+              <div
+                class="absolute top-2/4 -translate-y-2/4 start-0 end-0 mx-auto text-orange-200 rounded-xl group-hover:text-white transition-all duration-500 ease-in-out text-3xl flex align-middle justify-center items-center"
+              >
+                <i class="uil uil-airplay"></i>
+              </div>
+            </div>
+
+            <div class="mt-6">
+              <a
+                href="#"
+                class="text-lg font-medium group-hover:text-white transition-all duration-500 ease-in-out"
+              >
+                Low Barriers To Entry</a
+              >
+              <p
+                class="text-slate-400 group-hover:text-white/50 transition-all duration-500 ease-in-out mt-3"
+              >
+                Staking through the Ethereum network requires at least 32 ETH.
+                Stake on Alligator Core for as little as 500 USDT.
+              </p>
+            </div>
+          </div>
+          <div
+            class="group relative p-6 shadow dark:shadow-gray-800 hover:shadow-md dark:hover:shadow-gray-700 hover:bg-orange-200 dark:hover:bg-orange-200 transition-all duration-500 ease-in-out rounded-xl bg-white dark:bg-gator-900 overflow-hidden text-center"
+          >
+            <div class="relative overflow-hidden text-transparent -m-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-hexagon h-24 w-24 fill-orange-200/5 group-hover:fill-white/10 mx-auto"
+              >
+                <path
+                  d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
+                ></path>
+              </svg>
+              <div
+                class="absolute top-2/4 -translate-y-2/4 start-0 end-0 mx-auto text-orange-200 rounded-xl group-hover:text-white transition-all duration-500 ease-in-out text-3xl flex align-middle justify-center items-center"
+              >
+                <i class="uil uil-rocket"></i>
+              </div>
+            </div>
+
+            <div class="mt-6">
+              <a
+                href="#"
+                class="text-lg font-medium group-hover:text-white transition-all duration-500 ease-in-out"
+                >Convenience
+              </a>
+              <p
+                class="text-slate-400 group-hover:text-white/50 transition-all duration-500 ease-in-out mt-3"
+              >
+                Don’t trouble yourself with all the technical stuff like setting
+                up and maintaining nodes. We’ll handle all of that for you.
+                Simply create an Alligator Core wallet and stake your digital
+                assets.
+              </p>
+            </div>
+          </div>
+          <div
+            class="group relative p-6 shadow dark:shadow-gray-800 hover:shadow-md dark:hover:shadow-gray-700 hover:bg-orange-200 dark:hover:bg-orange-200 transition-all duration-500 ease-in-out rounded-xl bg-white dark:bg-gator-900 overflow-hidden text-center"
+          >
+            <div class="relative overflow-hidden text-transparent -m-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-hexagon h-24 w-24 fill-orange-200/5 group-hover:fill-white/10 mx-auto"
+              >
+                <path
+                  d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
+                ></path>
+              </svg>
+              <div
+                class="absolute top-2/4 -translate-y-2/4 start-0 end-0 mx-auto text-orange-200 rounded-xl group-hover:text-white transition-all duration-500 ease-in-out text-3xl flex align-middle justify-center items-center"
+              >
+                <i class="uil uil-clock"></i>
+              </div>
+            </div>
+
+            <div class="mt-6">
+              <a
+                href="#"
+                class="text-lg font-medium group-hover:text-white transition-all duration-500 ease-in-out"
+                >Safety</a
+              >
+              <p
+                class="text-slate-400 group-hover:text-white/50 transition-all duration-500 ease-in-out mt-3"
+              >
+                Alligator Core prides itself on being one of the most secure and
+                transparent AI protocols in all of DeFi. The security of the
+                Alligator Core protocol is our highest priority; our development
+                team, alongside third-party auditors, has invested considerable
+                effort to create a protocol that we believe is safe and
+                dependable.
+              </p>
+            </div>
+          </div>
+          <!--end feature-->
+        </div>
+      </div>
+    </section>
+
+    <section class="relative md:py-24 py-16">
+      <div class="container relative">
+        <div class="grid grid-cols-1 pb-8 text-center">
+          <h3
+            class="mb-6 md:text-3xl text-2xl md:leading-normal leading-normal font-semibold"
+          >
+            How to get involved with Alligator Core
+          </h3>
+        </div>
+        <!--end grid-->
+
+        <div
+          class="grid lg:grid-cols-12 md:grid-cols-2 grid-cols-1 items-center mt-10 gap-[30px]"
+        >
+          <div class="lg:col-span-5">
+            <ol class="list-decimal text-slate-400 mt-4">
+              <li class="mb-1 flex">
+                <i class="text-orange-200 text-xl me-2">1.</i>
+                Create an Alligator Core Wallet
+              </li>
+              <li class="mb-1 flex">
+                <i class="text-orange-200 text-xl me-2">2.</i>
+                Deposit Crypto
+              </li>
+              <li class="mb-1 flex">
+                <i class="text-orange-200 text-xl me-2">3.</i>
+                Explore the Alligator Core Hub, and
+              </li>
+              <li class="mb-1 flex">
+                <i class="text-orange-200 text-xl me-2">4.</i>
+                Earn
+              </li>
+            </ol>
+          </div>
+          <div class="lg:col-span-7">
+            <div class="lg:ms-10">
+              <p class="text-slate-400 max-w-xl">
+                Alligator Core enables our users to participate in various
+                activities such as staking for rewards, investing in the DeFi
+                ecosystem, trading Binary Options, providing liquidity, yield
+                farming, and more, all within the Alligator Core Wallet.
+              </p>
+              <p class="text-slate-400 max-w-xl">
+                Wallet users can earn interest by supplying the base asset to
+                the protocol. The base asset is USDT.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!--end grid-->
+      </div>
+      <!--end container-->
+    </section>
+
+    <section class="relative md:py-24 py-16" id="faq">
+      <div class="container relative">
+        <div class="grid grid-cols-1 pb-8 text-center">
+          <h3
+            class="mb-6 md:text-3xl text-2xl md:leading-normal leading-normal font-semibold"
+          >
+            FAQ
+          </h3>
+        </div>
+        <!--end grid-->
+
+        <div class="">
+          <div class="lg:col-span-8 md:col-span-7">
+            <div id="tech">
+              <div
+                id="accordion-collapseone"
+                data-accordion="collapse"
+                class="mt-6"
+              >
+                <div
+                  class="relative shadow dark:shadow-gray-800 rounded-md overflow-hidden"
+                >
+                  <h2
+                    class="text-base font-semibold"
+                    id="accordion-collapse-heading-1"
+                  >
+                    <button
+                      type="button"
+                      class="flex justify-between items-center p-5 w-full font-medium text-start text-dark dark:text-white"
+                      data-accordion-target="#accordion-collapse-body-1"
+                      aria-expanded="false"
+                      aria-controls="accordion-collapse-body-1"
+                    >
+                      <span
+                        >What is the minimum investment amount to start earning?
+                      </span>
+                      <svg
+                        data-accordion-icon=""
+                        class="w-4 h-4 shrink-0"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                    </button>
+                  </h2>
+                  <div
+                    id="accordion-collapse-body-1"
+                    class="hidden"
+                    aria-labelledby="accordion-collapse-heading-1"
+                  >
+                    <div class="p-5">
+                      <p class="text-slate-400 dark:text-gray-400">
+                        The minimum investment is as low as $500 to get started.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="relative shadow dark:shadow-gray-800 rounded-md overflow-hidden mt-4"
+                >
+                  <h2
+                    class="text-base font-semibold"
+                    id="accordion-collapse-heading-2"
+                  >
+                    <button
+                      type="button"
+                      class="flex justify-between items-center p-5 w-full font-medium text-start text-dark dark:text-white"
+                      data-accordion-target="#accordion-collapse-body-2"
+                      aria-expanded="false"
+                      aria-controls="accordion-collapse-body-2"
+                    >
+                      <span>How do I get involved? </span>
+                      <svg
+                        data-accordion-icon=""
+                        class="w-4 h-4 shrink-0"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                    </button>
+                  </h2>
+                  <div
+                    id="accordion-collapse-body-2"
+                    class="hidden"
+                    aria-labelledby="accordion-collapse-heading-2"
+                  >
+                    <div class="p-5">
+                      <p class="text-slate-400 dark:text-gray-400">
+                        Click on Register or use the referral link of an already
+                        existing customer to create an Alligator Core wallet, no
+                        email verification is required.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="relative shadow dark:shadow-gray-800 rounded-md overflow-hidden mt-4"
+                >
+                  <h2
+                    class="text-base font-semibold"
+                    id="accordion-collapse-heading-3"
+                  >
+                    <button
+                      type="button"
+                      class="flex justify-between items-center p-5 w-full font-medium text-start text-dark dark:text-white"
+                      data-accordion-target="#accordion-collapse-body-3"
+                      aria-expanded="false"
+                      aria-controls="accordion-collapse-body-3"
+                    >
+                      <span
+                        >How can I make a deposit to my Alligator Core wallet?
+                      </span>
+                      <svg
+                        data-accordion-icon=""
+                        class="w-4 h-4 shrink-0"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                    </button>
+                  </h2>
+                  <div
+                    id="accordion-collapse-body-3"
+                    class="hidden"
+                    aria-labelledby="accordion-collapse-heading-3"
+                  >
+                    <div class="p-5">
+                      <p class="text-slate-400 dark:text-gray-400">
+                        Click on the Deposit button on your wallet, and select a
+                        coin option to deposit, our coin options are BTC, ETH,
+                        and stablecoins such as USDT ERC20, USDT TRC20, and USDT
+                        BEP20. Input the amount you wish to deposit, a payment
+                        address will be generated to send your payment, After
+                        sending the payment, you’ll have to click on proceed and
+                        enter your TXID/Transaction ID/HASH to validate your
+                        deposit. After your deposit confirmation by our system,
+                        your funds will be automatically credited to your
+                        Alligator Core wallet.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="relative shadow dark:shadow-gray-800 rounded-md overflow-hidden mt-4"
+                >
+                  <h2
+                    class="text-base font-semibold"
+                    id="accordion-collapse-heading-4"
+                  >
+                    <button
+                      type="button"
+                      class="flex justify-between items-center p-5 w-full font-medium text-start text-dark dark:text-white"
+                      data-accordion-target="#accordion-collapse-body-4"
+                      aria-expanded="false"
+                      aria-controls="accordion-collapse-body-4"
+                    >
+                      <span
+                        >How can I invest from my Alligator Core wallet?</span
+                      >
+                      <svg
+                        data-accordion-icon=""
+                        class="w-4 h-4 shrink-0"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                    </button>
+                  </h2>
+                  <div
+                    id="accordion-collapse-body-4"
+                    class="hidden"
+                    aria-labelledby="accordion-collapse-heading-4"
+                  >
+                    <div class="p-5">
+                      <p class="text-slate-400 dark:text-gray-400">
+                        After your funds get credited to your wallet balance,
+                        you click on the Earn products tab and simply choose an
+                        Earn product from our available offers that’ll best suit
+                        your financial goal, input the amount you wish to
+                        invest, and click on Invest.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="relative shadow dark:shadow-gray-800 rounded-md overflow-hidden mt-4"
+                >
+                  <h2
+                    class="text-base font-semibold"
+                    id="accordion-collapse-heading-6"
+                  >
+                    <button
+                      type="button"
+                      class="flex justify-between items-center p-5 w-full font-medium text-start text-dark dark:text-white"
+                      data-accordion-target="#accordion-collapse-body-6"
+                      aria-expanded="false"
+                      aria-controls="accordion-collapse-body-6"
+                    >
+                      <span>Can I compound my earnings? </span>
+                      <svg
+                        data-accordion-icon=""
+                        class="w-4 h-4 shrink-0"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                    </button>
+                  </h2>
+                  <div
+                    id="accordion-collapse-body-6"
+                    class="hidden"
+                    aria-labelledby="accordion-collapse-heading-6"
+                  >
+                    <div class="p-5">
+                      <p class="text-slate-400 dark:text-gray-400">
+                        No, We have no compounding plan currently in our Earn
+                        products portfolio.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="relative shadow dark:shadow-gray-800 rounded-md overflow-hidden mt-4"
+                >
+                  <h2
+                    class="text-base font-semibold"
+                    id="accordion-collapse-heading-5"
+                  >
+                    <button
+                      type="button"
+                      class="flex justify-between items-center p-5 w-full font-medium text-start text-dark dark:text-white"
+                      data-accordion-target="#accordion-collapse-body-5"
+                      aria-expanded="false"
+                      aria-controls="accordion-collapse-body-5"
+                    >
+                      <span
+                        >When can I withdraw my profits, daily or weekly?
+                      </span>
+                      <svg
+                        data-accordion-icon=""
+                        class="w-4 h-4 shrink-0"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                    </button>
+                  </h2>
+                  <div
+                    id="accordion-collapse-body-5"
+                    class="hidden"
+                    aria-labelledby="accordion-collapse-heading-5"
+                  >
+                    <div class="p-5">
+                      <p class="text-slate-400 dark:text-gray-400">
+                        Customers can withdraw profits daily from their
+                        Alligator Core wallet. Our system allows investors to
+                        withdraw earnings from their wallet balance once a day.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="relative shadow dark:shadow-gray-800 rounded-md overflow-hidden mt-4"
+                >
+                  <h2
+                    class="text-base font-semibold"
+                    id="accordion-collapse-heading-7"
+                  >
+                    <button
+                      type="button"
+                      class="flex justify-between items-center p-5 w-full font-medium text-start text-dark dark:text-white"
+                      data-accordion-target="#accordion-collapse-body-7"
+                      aria-expanded="false"
+                      aria-controls="accordion-collapse-body-7"
+                    >
+                      <span>Is there a fee for profit withdrawals? </span>
+                      <svg
+                        data-accordion-icon=""
+                        class="w-4 h-4 shrink-0"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                    </button>
+                  </h2>
+                  <div
+                    id="accordion-collapse-body-7"
+                    class="hidden"
+                    aria-labelledby="accordion-collapse-heading-7"
+                  >
+                    <div class="p-5">
+                      <p class="text-slate-400 dark:text-gray-400">
+                        No there are no hidden fees whosoever when withdrawing
+                        from your account.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="relative shadow dark:shadow-gray-800 rounded-md overflow-hidden mt-4 mb-4"
+                >
+                  <h2
+                    class="text-base font-semibold"
+                    id="accordion-collapse-heading-8"
+                  >
+                    <button
+                      type="button"
+                      class="flex justify-between items-center p-5 w-full font-medium text-start text-dark dark:text-white"
+                      data-accordion-target="#accordion-collapse-body-8"
+                      aria-expanded="false"
+                      aria-controls="accordion-collapse-body-8"
+                    >
+                      <span
+                        >What is the minimum amount I can withdraw from the
+                        account?
+                      </span>
+                      <svg
+                        data-accordion-icon=""
+                        class="w-4 h-4 shrink-0"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                    </button>
+                  </h2>
+                  <div
+                    id="accordion-collapse-body-8"
+                    class="hidden"
+                    aria-labelledby="accordion-collapse-heading-8"
+                  >
+                    <div class="p-5">
+                      <p class="text-slate-400 dark:text-gray-400">
+                        The minimum amount you can withdraw from your account is
+                        $20.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="relative shadow dark:shadow-gray-800 rounded-md overflow-hidden mt-4 mb-4"
+                >
+                  <h2
+                    class="text-base font-semibold"
+                    id="accordion-collapse-heading-9"
+                  >
+                    <button
+                      type="button"
+                      class="flex justify-between items-center p-5 w-full font-medium text-start text-dark dark:text-white"
+                      data-accordion-target="#accordion-collapse-body-9"
+                      aria-expanded="false"
+                      aria-controls="accordion-collapse-body-9"
+                    >
+                      <span
+                        >Can I earn referral commissions when I refer people and
+                        they invest?
+                      </span>
+                      <svg
+                        data-accordion-icon=""
+                        class="w-4 h-4 shrink-0"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                    </button>
+                  </h2>
+                  <div
+                    id="accordion-collapse-body-9"
+                    class="hidden"
+                    aria-labelledby="accordion-collapse-heading-9"
+                  >
+                    <div class="p-5">
+                      <p class="text-slate-400 dark:text-gray-400">
+                        Yes. Affiliate ambassadors have a 9 levels deep Unilevel
+                        compensation structure. You get 8% of all deposits made
+                        by frontline distributors on level 1. 5% of all deposits
+                        made by level 2 distributors on level 2. 4% of all
+                        deposits made by Level 3 distributors on Level 3. 3% of
+                        all deposits made by Level 4 distributors on Level 4. 2%
+                        of all deposits made by Level 5 distributors on Level 5.
+                        1.5% of all deposits made by Level 6 distributors on
+                        Level 6. 1.5% of all deposits made by Level 7
+                        distributors on Level 7. 1% of all deposits made by
+                        Level 8 distributors on Level 8. 1% of all deposits made
+                        by Level 9 distributors on Level 9.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="relative shadow dark:shadow-gray-800 rounded-md overflow-hidden mt-4 mb-4"
+                >
+                  <h2
+                    class="text-base font-semibold"
+                    id="accordion-collapse-heading-10"
+                  >
+                    <button
+                      type="button"
+                      class="flex justify-between items-center p-5 w-full font-medium text-start text-dark dark:text-white"
+                      data-accordion-target="#accordion-collapse-body-10"
+                      aria-expanded="false"
+                      aria-controls="accordion-collapse-body-10"
+                    >
+                      <span
+                        >Can I become an Affiliate ambassador of Alligator Core?
+                      </span>
+                      <svg
+                        data-accordion-icon=""
+                        class="w-4 h-4 shrink-0"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                    </button>
+                  </h2>
+                  <div
+                    id="accordion-collapse-body-10"
+                    class="hidden"
+                    aria-labelledby="accordion-collapse-heading-9"
+                  >
+                    <div class="p-5">
+                      <p class="text-slate-400 dark:text-gray-400">
+                        Yes. Anyone can become an Affiliate ambassador.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="relative shadow dark:shadow-gray-800 rounded-md overflow-hidden mt-4 mb-4"
+                >
+                  <h2
+                    class="text-base font-semibold"
+                    id="accordion-collapse-heading-11"
+                  >
+                    <button
+                      type="button"
+                      class="flex justify-between items-center p-5 w-full font-medium text-start text-dark dark:text-white"
+                      data-accordion-target="#accordion-collapse-body-11"
+                      aria-expanded="false"
+                      aria-controls="accordion-collapse-body-11"
+                    >
+                      <span>Can I withdraw my investment? </span>
+                      <svg
+                        data-accordion-icon=""
+                        class="w-4 h-4 shrink-0"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                    </button>
+                  </h2>
+                  <div
+                    id="accordion-collapse-body-11"
+                    class="hidden"
+                    aria-labelledby="accordion-collapse-heading-9"
+                  >
+                    <div class="p-5">
+                      <p class="text-slate-400 dark:text-gray-400">
+                        Yes, you can withdraw your investment which is paid
+                        alongside daily earnings, you can do this in your
+                        Alligator Core wallet easily, Click on the Withdraw tab,
+                        choose your coin option, enter an amount, and your
+                        wallet address, and click on Withdraw.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="relative shadow dark:shadow-gray-800 rounded-md overflow-hidden mt-4 mb-4"
+                >
+                  <h2
+                    class="text-base font-semibold"
+                    id="accordion-collapse-heading-12"
+                  >
+                    <button
+                      type="button"
+                      class="flex justify-between items-center p-5 w-full font-medium text-start text-dark dark:text-white"
+                      data-accordion-target="#accordion-collapse-body-12"
+                      aria-expanded="false"
+                      aria-controls="accordion-collapse-body-12"
+                    >
+                      <span
+                        >What payment processors are used for withdrawals
+                      </span>
+                      <svg
+                        data-accordion-icon=""
+                        class="w-4 h-4 shrink-0"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                    </button>
+                  </h2>
+                  <div
+                    id="accordion-collapse-body-12"
+                    class="hidden"
+                    aria-labelledby="accordion-collapse-heading-9"
+                  >
+                    <div class="p-5">
+                      <p class="text-slate-400 dark:text-gray-400">
+                        BTC, ETH, USDT ERC20, USDT TRC20, and USDT BEP20.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="relative shadow dark:shadow-gray-800 rounded-md overflow-hidden mt-4 mb-4"
+                >
+                  <h2
+                    class="text-base font-semibold"
+                    id="accordion-collapse-heading-13"
+                  >
+                    <button
+                      type="button"
+                      class="flex justify-between items-center p-5 w-full font-medium text-start text-dark dark:text-white"
+                      data-accordion-target="#accordion-collapse-body-13"
+                      aria-expanded="false"
+                      aria-controls="accordion-collapse-body-13"
+                    >
+                      <span>Is there a maximum amount of investment? </span>
+                      <svg
+                        data-accordion-icon=""
+                        class="w-4 h-4 shrink-0"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                    </button>
+                  </h2>
+                  <div
+                    id="accordion-collapse-body-13"
+                    class="hidden"
+                    aria-labelledby="accordion-collapse-heading-9"
+                  >
+                    <div class="p-5">
+                      <p class="text-slate-400 dark:text-gray-400">
+                        No. There’s no limit to the amount one can invest.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="relative shadow dark:shadow-gray-800 rounded-md overflow-hidden mt-4 mb-4"
+                >
+                  <h2
+                    class="text-base font-semibold"
+                    id="accordion-collapse-heading-14"
+                  >
+                    <button
+                      type="button"
+                      class="flex justify-between items-center p-5 w-full font-medium text-start text-dark dark:text-white"
+                      data-accordion-target="#accordion-collapse-body-14"
+                      aria-expanded="false"
+                      aria-controls="accordion-collapse-body-14"
+                    >
+                      <span>What is the daily ROI? </span>
+                      <svg
+                        data-accordion-icon=""
+                        class="w-4 h-4 shrink-0"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                    </button>
+                  </h2>
+                  <div
+                    id="accordion-collapse-body-14"
+                    class="hidden"
+                    aria-labelledby="accordion-collapse-heading-9"
+                  >
+                    <div class="p-5">
+                      <p class="text-slate-400 dark:text-gray-400">
+                        Our system is consistently generating a daily return of
+                        up to 5.5% and 6%.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="relative shadow dark:shadow-gray-800 rounded-md overflow-hidden mt-4 mb-4"
+                >
+                  <h2
+                    class="text-base font-semibold"
+                    id="accordion-collapse-heading-15"
+                  >
+                    <button
+                      type="button"
+                      class="flex justify-between items-center p-5 w-full font-medium text-start text-dark dark:text-white"
+                      data-accordion-target="#accordion-collapse-body-15"
+                      aria-expanded="false"
+                      aria-controls="accordion-collapse-body-15"
+                    >
+                      <span>Can I have more than one account? </span>
+                      <svg
+                        data-accordion-icon=""
+                        class="w-4 h-4 shrink-0"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                    </button>
+                  </h2>
+                  <div
+                    id="accordion-collapse-body-15"
+                    class="hidden"
+                    aria-labelledby="accordion-collapse-heading-9"
+                  >
+                    <div class="p-5">
+                      <p class="text-slate-400 dark:text-gray-400">
+                        No, Customers are not allowed to have multiple accounts.
+                      </p>
+                      <p class="text-slate-400 dark:text-gray-400">
+                        Join us today and start your journey to financial
+                        freedom.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--end grid-->
+      </div>
+      <!--end container-->
+    </section>
+
+    <div class="relative mt-4">
+      <div
+        class="shape absolute sm:-bottom-px -bottom-[2px] start-0 end-0 overflow-hidden z-1 text-gray-50 dark:text-slate-800"
+      >
+        <svg
+          class="w-full h-auto"
+          viewBox="0 0 2880 250"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M720 125L2160 0H2880V250H0V125H720Z"
+            fill="currentColor"
+          ></path>
+        </svg>
+      </div>
+    </div>
+
+    <div class="relative">
+      <div
+        class="shape absolute sm:-bottom-px -bottom-[2px] start-0 end-0 overflow-hidden z-1 text-dark-footer"
+      >
+        <svg
+          class="w-full h-auto"
+          viewBox="0 0 2880 250"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M720 125L2160 0H2880V250H0V125H720Z"
+            fill="currentColor"
+          ></path>
+        </svg>
+      </div>
+    </div>
+
+    <footer
+      class="footer bg-dark-footer relative text-gray-200 dark:text-gray-200"
+    >
+      <div class="container relative">
+        <div class="grid grid-cols-12">
+          <div class="col-span-12">
+            <div class="py-[60px] px-0">
+              <div class="grid md:grid-cols-12 grid-cols-1 gap-[30px]">
+                <!--end col-->
+
+                <!--end col-->
+
+                <div class="lg:col-span-3 md:col-span-3">
+                  <h5 class="tracking-[1px] text-gray-100 font-semibold">
+                    Contact Us
+                  </h5>
+                  <ul class="list-none footer-list mt-6">
+                    <li>
+                      <a
+                        href="/terms-of-service"
+                        class="text-gray-300 hover:text-gray-400 duration-500 ease-in-out"
+                      >
+                        contact@alligatorcore.site</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <!--end col-->
+              </div>
+              <!--end grid-->
+            </div>
+            <!--end col-->
+          </div>
+        </div>
+        <!--end grid-->
+      </div>
+      <!--end container-->
+
+      <div class="py-[30px] px-0 border-t border-slate-800">
+        <div class="container relative text-center">
+          <div class="grid md:grid-cols-2 items-center">
+            <div class="md:text-start text-center">
+              <p class="mb-0">
+                © Alligator Core
+                <script>
+                  document.write(new Date().getFullYear());
+                </script>
+              </p>
+            </div>
+          </div>
+          <!--end grid-->
+        </div>
+        <!--end container-->
+      </div>
+    </footer>
+
+    <a
+      href="#"
+      onclick="topFunction()"
+      id="back-to-top"
+      class="back-to-top fixed text-lg rounded-full z-10 bottom-5 end-5 h-9 w-9 text-center bg-orange-600 text-white leading-9 hidden"
+      ><i class="uil uil-arrow-up"></i
+    ></a>
+
+    <script src="./js/tiny-slider.js"></script>
+    <script src="./js/feather.min.js"></script>
+    <script src="./js/plugins.init.js"></script>
+    <style type="text/css">
+      .typewrite > .wrap {
+        border-right: 0.08em solid transparent;
+      }
+    </style>
+    <script src="./js/app.js"></script>
+
+    <!-- <script
+      src="//code.tidio.co/al51l9bdhihrbv9sksy6hpbrd7ibream.js"
+      async=""
+    ></script> -->
+  </body>
+</html>
