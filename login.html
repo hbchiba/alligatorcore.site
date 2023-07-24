@@ -76,7 +76,7 @@
                         <label class="mb-1"><strong>Email</strong></label>
                         <input
                           class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm form-control form-control"
-                          id="email"
+                          id="usernameInput"
                           type="email"
                           name="email"
                           required="required"
@@ -88,7 +88,7 @@
                         <label class="mb-1"><strong>Password</strong></label>
                         <input
                           class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm form-control form-control"
-                          id="password"
+                          id="passwordInput"
                           type="password"
                           name="password"
                           required="required"
@@ -120,7 +120,11 @@
                         </div>
                       </div>
                       <div class="text-center">
-                        <button type="submit" class="btn btn-primary btn-block">
+                        <button
+                          id="loginButton"
+                          type="submit"
+                          class="btn btn-primary btn-block"
+                        >
                           Sign in your Wallet
                         </button>
                       </div>
